@@ -12,6 +12,7 @@
 	">
 	
 	<context:component-scan base-package="com.muli.java.onlineshoppingcart.controller"></context:component-scan>
+	<context:component-scan base-package="com.muli.java.shoppingcartbackend.daoimpl"></context:component-scan>
 	
 	<bean id="viewResolver" 
 		  class="org.springframework.web.servlet.view.InternalResourceViewResolver">

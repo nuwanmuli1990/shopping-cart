@@ -41,6 +41,13 @@
 	if ('${isContactPage}') {
 		window.menuStatus = "Contact";
 	}
+	if ('${isAllProducts}') {
+		window.menuStatus = "Product";
+	}
+	if ('${isCategoryProducts}') {
+		window.menuStatus = "CategoryProduct";
+		window.catName = '${category.name}';
+	}
 </script>
 
 </head>
@@ -64,6 +71,10 @@
 
 			<c:if test="${isContactPage}">
 				<%@include file="contact-us.jsp"%>
+			</c:if>
+			
+			<c:if test="${isAllProducts or isCategoryProducts}">
+				<%@include file="product-services.jsp"%>
 			</c:if>
 		</div>
 		<!--Include Page Content -->
